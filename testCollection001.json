@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "a0ca0af3-1be5-4ac8-8711-485342873b8d",
+		"name": "test001",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Animals",
+			"item": [
+				{
+					"name": "Cat Facts",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Status verified is true\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData[0].status.verified).to.eql(true);",
+									"});",
+									"",
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cat-fact.herokuapp.com/facts/",
+							"protocol": "https",
+							"host": [
+								"cat-fact",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"facts",
+								""
+							]
+						},
+						"description": "Facts about cats.\n\nURL - https://alexwohlbruck.github.io/cat-facts/"
+					},
+					"response": []
+				},
+				{
+					"name": "Dog Breeds",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dog.ceo/api/breeds/list/all",
+							"protocol": "https",
+							"host": [
+								"dog",
+								"ceo"
+							],
+							"path": [
+								"api",
+								"breeds",
+								"list",
+								"all"
+							]
+						},
+						"description": "List all dog breeds.\n\nURL - https://dog.ceo/dog-api/documentation/"
+					},
+					"response": []
+				},
+				{
+					"name": "Pet Food Facts",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code name has string\", function () {",
+									"    pm.response.to.have.status(\"OK\");",
+									"});",
+									"",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://world.openpetfoodfacts.org/api/v0/product/20106836.json",
+							"protocol": "https",
+							"host": [
+								"world",
+								"openpetfoodfacts",
+								"org"
+							],
+							"path": [
+								"api",
+								"v0",
+								"product",
+								"20106836.json"
+							]
+						},
+						"description": "Returns facts on pet food using barcode."
+					},
+					"response": []
+				}
+			],
+			"description": "These are public API endpoints for animals.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}

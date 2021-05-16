@@ -1,0 +1,25 @@
+{
+  "name": "api-postman",
+  "version": "1.0.0",
+  "description": "Api Postman",
+  "main": "driver.js",
+  "dependencies": {
+    "newman": "^5.2.3",
+    "newman-reporter-html": "^1.0.5",
+    "newman-reporter-htmlextra": "^1.20.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sndp2510/api-postman.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sndp2510/api-postman/issues"
+  },
+  "homepage": "https://github.com/sndp2510/api-postman#readme"
+}
