@@ -4,6 +4,10 @@
   "description": "Api Postman",
   "main": "driver.js",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "multer": "^1.4.2",
     "newman": "^5.2.3",
     "newman-reporter-html": "^1.0.5",
     "newman-reporter-htmlextra": "^1.20.4"
